@@ -84,17 +84,17 @@ fn main() {
 }
 
 fn help() {
-    println!(
-        r#"{} [options] [arguments]
- Options:
+    println!(r#"Usage: {} [options] [arguments]
+
+Options:
     color <R,G,B>                     | Change led color to values (max value for each 255)
     brightness <value>                | Change led brighness to value (max 100)
     haptics <value>                   | Change haptic intensity to value (max 100)
-    mic_monitor | sidetone <value>    | Change mic monitor state to value (max 86)
-    voltage | mv                      | Get the current voltage of the battery (EXPERIMENTAL)
-    --help | -h                       | Shows this help menu
-    --version | -v                    | Shows the application's version
-    "#,
+    mic_monitor, sidetone <value>     | Change mic monitor state to value (max 86)
+    mv, voltage                       | Get the current voltage of the battery (EXPERIMENTAL)
+    -h, --help                        | Shows this help menu
+    -v, --version                     | Shows the application's version 
+"#,
         env!("CARGO_PKG_NAME")
     );
 }
