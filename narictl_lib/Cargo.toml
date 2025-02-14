@@ -1,0 +1,11 @@
+[package]
+name = "narictl_lib"
+description = "The narictl applications depend on this library as it has the important functions that are needed to communicate with the headset"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+readme.workspace = true
+
+[dependencies]
+rusb = "0.9.4"

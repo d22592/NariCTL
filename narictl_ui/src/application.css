@@ -1,0 +1,269 @@
+window {
+    background-color: #222;
+    min-width: 640px;
+    min-height: 720px;
+}
+
+main_stack {
+    padding: 0 4em;
+}
+
+label {
+    font-family: System-ui;
+    font-weight: 450;
+    color: white;
+}
+
+title {
+    font-weight: 390;
+    text-transform: UPPERCASE;
+    color: #1d1;
+    margin-top: 1px;
+    margin-bottom: 22px;
+    margin-left: 0px;
+    transform: none;
+}
+
+property_box {
+    margin-top: 44px;
+}
+
+properties {
+    padding: 32px;
+    border-radius: 4px;
+    background-color: #121212;
+}
+
+switcher > button {
+    border-radius: 0;
+    border-color: transparent;
+    background-image: none;
+    background-color: #1d1;
+    min-height: 38px;
+}
+
+switcher_box {
+    background-color: #1d1;
+}
+
+switcher {
+    margin-left: 32px;
+}
+
+switcher > button:checked, .linked > button {
+    background-image: none;
+    background-color: #1d1;
+}
+
+switcher > button:hover, .linked > button:hover {
+    background-image: none;
+    background-color: #0c0;
+}
+
+switcher > button > label {
+    font-weight: 360;
+    transform: scale(1.02,1.06);
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #444;
+}
+
+switcher > button:checked > label {
+    color: #000;
+}
+
+header > label {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 480;
+    text-transform: UPPERCASE;
+    color: #252;
+}
+
+device_label {
+    padding: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: UPPERCASE;
+    background-color: #2f2f2f;
+    color: #aaa;
+}
+
+trough > highlight, trough {
+    border-color: #1d1;
+    background-color: #1d1;
+}
+
+trough {
+    background-color: #080;
+    border-color: #080;
+    min-height: 3px;
+}
+
+trough > slider {
+    background-image: none;
+    background-color: #1d1;
+    border-color: #090;
+}
+
+info {
+    font-size: 12px;
+    padding: 0 2px;
+}
+
+scale {
+    padding: 0;
+}
+
+switch {
+    margin-left: 10px;
+    border-color: grey;
+    background-color: grey;
+    background-image: none;
+    transition-property: background-color, border-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transform: scale(0.84, 0.84);
+}
+
+switch > slider {
+    background-color: black;
+    background-image: none;
+    border-color: black;
+    min-width: 18px;
+    min-height: 18px;
+    margin: 0px;
+}
+
+switch:checked {
+    background-image: none;
+    background-color: #1d1;
+    border-color: #1a1;
+}
+
+colorbutton > button {
+    padding: 2px;
+    min-height: 10px;
+    min-width: 10px;
+}
+
+colorbutton > button > colorswatch > overlay {
+    padding: 0px;
+}
+
+colorbutton > button, headerbar {
+    background-image: none;
+    background-color: #222;
+    border-color: transparent;
+}
+
+colorbutton {
+    border: solid 1px #555;
+}
+
+colorbutton > button > colorswatch {
+    border-radius: 3px;
+}
+
+.text-button {
+    background-image: none;
+    background-color: #333;
+    border-color: transparent;
+}
+
+.suggested-action {
+    background-image: none;
+    background-color: #1d1;
+    border-color: #0a0;
+}
+
+.suggested-action:active {
+    background-image: none;
+    background-color: #1a1;
+    border-color: #0a0;
+}
+
+.suggested-action > label {
+    color: #000;
+}
+
+#add-color-button {
+    background-image: none;
+    background-color: black;
+}
+
+.colorchooser, csd {
+    min-width: 484px;
+    min-height: 400px;
+}
+
+#h > trough > slider {
+    background-color: white;
+    border-color: black;
+}
+
+entry {
+    background: #111;
+    border-color: #000;
+    color: white;
+}
+
+scale > trough > fill {
+    border-color: #060;
+    background-color: #080;
+}
+
+scale > value {
+    padding: 0 4px;
+    border-radius: 2px;
+    color: black;
+    background-color: #0c0;
+    margin-bottom: 2px;
+}
+
+dropdown {
+    margin-bottom: 1em;
+    border: 1px solid #555;
+}
+
+dropdown > button {
+    padding: 0 6px;
+    background: none;
+}
+
+popover {
+    margin-top: 0;
+}
+
+popover > contents {
+    border-radius: 0;
+    border: 1px solid #555;
+    border-top: #0000;
+}
+
+popover > contents, listview > row {
+    background: black;
+}
+
+listview > row:selected {
+    background: #444;
+}
+
+listview > row {
+    border-radius: 0;
+    padding: 2px 8px;
+}
+
+listview > row > box > label {
+    margin-right: 8px;
+}
+
+box > arrow {
+    -gtk-icon-size: 10px;
+    min-width: 10px;
+    min-height: 10px;
+}
+
+scrolledwindow > listview {
+    margin: 0;
+}

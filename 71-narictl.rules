@@ -1,0 +1,2 @@
+# Razer Nari Ultimate
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="051a", TAG+="uaccess"
