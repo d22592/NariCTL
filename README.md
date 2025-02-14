@@ -19,6 +19,21 @@ Once the build completes, try out the completed binaries at "target/release" dir
 
 Note: If you get permission errors, copy `71-narictl.rules` to `/usr/lib/udev/rules.d/`, then run this command as the root user: `udevadm control --reload-rules && udevadm trigger`
 
+## Usage
+
+```
+ Usage: narictl [options] [arguments]
+
+ Options:
+    color <R,G,B>                     | Change led color to values (max value for each 255)
+    brightness <value>                | Change led brighness to value (max 100)
+    haptics <value>                   | Change haptic intensity to value (max 100)
+    mic_monitor, sidetone <value>     | Change mic monitor state to value (max 86)
+    mv, voltage                       | Get the current voltage of the battery (EXPERIMENTAL)
+    -h, --help                        | Shows this help menu
+    -v, --version                     | Shows the application's version
+```
+
 ## Features
 
 - Enable/Disable haptics
