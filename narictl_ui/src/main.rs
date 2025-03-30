@@ -53,8 +53,8 @@ impl SimpleComponent for Application {
     fn init_root() -> Self::Root {
         gtk::Window::builder()
             .title(format!("NariCTL v{}", env!("CARGO_PKG_VERSION")))
-            .default_width(500)
-            .default_height(300)
+            .default_width(1160)
+            .default_height(640)
             .build()
     }
 
@@ -98,13 +98,13 @@ impl SimpleComponent for Application {
             .expect("Failed to get data from the headset");
         let info_text = if mv != 0 {
             format!(
-                "<b>NariCTL</b> Version: {}\nVoltage: <i>{mv} mv</i>\n\n\n<small>Built and optimized for use with the Razer Nari Ultimate only</small>",
+                "<b>NariCTL</b>\n\nVersion: {}\nVoltage: <i>{mv} mv</i>\n\n\n<small>Built and optimized for use with the Razer Nari Ultimate only</small>",
                 env!("CARGO_PKG_VERSION")
             )
         } else {
-            eprintln!("WARN: Unable to get voltage data");
+            eprintln!("Unable to get voltage data");
             format!(
-                "<b>NariCTL</b> Version: {}\n\n\n<small>Built and optimized for use with the Razer Nari Ultimate only</small>",
+                "<b>NariCTL</b>\n\nVersion: {}\n\n\n<small>Built and optimized for use with the Razer Nari Ultimate only</small>",
                 env!("CARGO_PKG_VERSION")
             )
         };
@@ -492,7 +492,7 @@ impl SimpleComponent for Application {
 
             AppInput::ToggleHaptics(state) => {
                 if let Err(e) = self.device.set_haptic_intensity(self.haptics, state) {
-                    eprintln!("An error occurred while trying toggle haptics, Error: {e}");
+                    eprintln!("An error occurred while trying to toggle haptics, Error: {e}");
                 }
             }
 

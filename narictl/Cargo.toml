@@ -6,6 +6,7 @@ description.workspace = true
 edition.workspace = true
 license.workspace = true
 readme.workspace = true
+default-run = "narictl"
 
 [dependencies.narictl_lib]
 path = "../narictl_lib"

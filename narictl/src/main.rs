@@ -6,15 +6,22 @@ SPDX-License-Identifier: GPL-3.0-or-later
 use narictl_lib::*;
 use std::env;
 
-const GENERIC_ERROR: &str = "Could not communicate with the headset";
+const GENERIC_ERROR: &str = "Failed to communicate with the headset";
 
 fn main() {
-    let device = Device::init().expect("Unable to initialize the headset");
-    let arguments: Vec<String> = env::args().collect();
+    let arguments: Vec<String> = env::args().skip(1).collect();
 
-    match arguments.get(1).unwrap_or(&String::new()).as_str() {
+    if arguments.is_empty() {
+        eprintln!("Please provide an argument");
+        help();
+        std::process::exit(1);
+    }
+
+    let device = Device::init().expect("Unable to initialize the headset");
+
+    match arguments.get(0).unwrap_or(&String::new()).as_str() {
         "color" => {
-            let args = arguments.get(2);
+            let args = arguments.get(1);
             let rgb = args
                 .unwrap_or(&String::new())
                 .split(',')
@@ -30,7 +37,7 @@ fn main() {
         }
         "brightness" => {
             let percentage = arguments
-                .get(2)
+                .get(1)
                 .unwrap_or(&String::new())
                 .parse::<u8>()
                 .unwrap_or_default();
@@ -43,7 +50,7 @@ fn main() {
         }
         "haptics" => {
             let percentage = arguments
-                .get(2)
+                .get(1)
                 .unwrap_or(&String::new())
                 .parse::<u8>()
                 .unwrap_or_default();
@@ -56,7 +63,7 @@ fn main() {
         }
         "mic_monitor" | "sidetone" => {
             let mut enable = arguments
-                .get(2)
+                .get(1)
                 .unwrap_or(&String::default())
                 .parse::<u8>()
                 .unwrap_or_default();

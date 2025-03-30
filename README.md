@@ -1,5 +1,7 @@
 # NariCTL
 
+![NariCTL_UI Screenshot](https://github.com/d22592/NariCTL/blob/main/docs/screenshot.png?raw=true)
+
 NariCTL is a tool which allows you to make changes to the Razer Nari Ultimate headset settings
 
 ## Installation

@@ -3,8 +3,8 @@ resolver = "2"
 members = ["narictl", "narictl_ui", "narictl_lib"]
 
 [workspace.package]
-edition = "2021"
-version = "0.1.6"
+edition = "2024"
+version = "0.1.7"
 authors = ["d22592 <d22592@proton.me>"]
 description = "NariCTL allows you to control the Razer Nari Ultimate headset"
 license = "GPL-3.0-or-later"
